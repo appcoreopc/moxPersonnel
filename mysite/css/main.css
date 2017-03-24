@@ -1,0 +1,34 @@
+.blueLayout  {
+    background-color: #f3f3f4;
+    color : #000;
+}
+
+.userPanelLayout { 
+    clear : both;
+    padding-top: 20px;
+}
+
+.userPanelLayout li {
+    list-style-type : none;
+    padding-left : 15px;
+    padding-right:  15px;
+}
+
+.avatarLayout {
+    float : left;
+}
+.avatar { 
+   border-radius: 50%;
+   width : 50px;
+   height : 50px;
+}
+.contactListLayout {
+    clear : both;
+    padding-top: 20px;
+    padding-bottom: 120px;
+}
+
+div .nav li { 
+    padding-right : 20px;
+    font-size : 16px;
+}
