@@ -122,7 +122,7 @@ ReactDOM.render(React.createElement("div", null,
     React.createElement(Hello2_1.Hello2, null),
     " ",
     React.createElement(Hello_1.Hello, { compiler: "TypeScript", framework: "React" }),
-    React.createElement(Hello3_1.Hello3, null),
+    React.createElement(Hello3_1.MyComponent, { foo: "bar" }),
     " "), document.getElementById("example"));
 
 
@@ -132,9 +132,29 @@ ReactDOM.render(React.createElement("div", null,
 
 "use strict";
 
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-exports.Hello3 = function () { return React.createElement("h1", null, "Hello from Jeremy2!!"); };
+var MyComponent = (function (_super) {
+    __extends(MyComponent, _super);
+    function MyComponent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MyComponent.prototype.render = function () {
+        return React.createElement("span", null, this.props.foo);
+    };
+    return MyComponent;
+}(React.Component));
+exports.MyComponent = MyComponent;
 
 
 /***/ })

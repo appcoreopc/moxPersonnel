@@ -1,4 +1,12 @@
 
 import * as React from "react";
 
-export const Hello3 = () => <h1>Hello from Jeremy2!!</h1>;
+ interface Props {
+  foo: string;
+}
+
+export class MyComponent extends React.Component<Props, {}> {
+  render() {
+    return <span>{this.props.foo}</span>
+  }
+}
