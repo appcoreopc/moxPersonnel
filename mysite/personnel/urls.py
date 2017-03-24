@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from django.views.generic.base import TemplateView
 from . import views
+from personnel.views import error
+
 
 urlpatterns = [
     #url(r'^$', TemplateView.as_view(template_name='index.html')),
@@ -10,3 +12,6 @@ urlpatterns = [
     #url(r'^(?P<question_id>[0-9]+)/results$', views.results, name="results"),
     #url(r'^(?P<question_id>[0-9]+)/vote$', views.vote, name="vote")
 ]
+
+handler404 = error
+handler500 = error
