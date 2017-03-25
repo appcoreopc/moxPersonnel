@@ -18,17 +18,23 @@ export class UserPanelComponent extends React.Component<any, {}> {
 
   componentDidMount() {
     this.unsubscribe = this.context.store.subscribe(() => this.forceUpdate());
+    console.log(this.props);
+    console.log(this.context);
+    
   }
   componentWillUnmount() {
     this.unsubscribe();
   }
 
   handleClick<MouseEvent>(evt: MouseEvent): void {
-    console.log("button click");
+    
+    console.log(this.props);
+    console.log(this.state);
+    this.props.incr();
   }
 
   render() {
-    return <div className="userPanelLayout" onClick={e => this.context.store.dispatch({ type:'INCR', by: 1 }) }>
+    return <div className="userPanelLayout" onClick={e => this.handleClick(e) }>
       <li>
        <label>Counter: </label><b>#{this.context.store.getState().counter}</b>
        </li>
