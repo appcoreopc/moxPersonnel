@@ -2,7 +2,7 @@
 import * as React from "react";
 import { GroupPanelComponent } from "./GroupPanelComponent"
 import { UserPanelComponent } from "./UserPanelComponent"
-import { DetailProfileComponent } from "./DetailProfileComponent"
+import  DetailProfileComponent  from "./DetailProfileComponent"
 
  interface Props {
   groupPanelTitle: string;
@@ -17,7 +17,7 @@ export class MainComponent extends React.Component<Props, {}> {
             <GroupPanelComponent title="main title"> </GroupPanelComponent>
             </div>
             <div className="col-sm-8">
-            <DetailProfileComponent title="Detail"> </DetailProfileComponent>
+            <DetailProfileComponent> </DetailProfileComponent>
             </div>
         </div>
     </div>

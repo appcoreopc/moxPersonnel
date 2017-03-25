@@ -10,6 +10,7 @@ let store = createStore(
     (state : any, action: any) => {
         switch (action.type) {
             case 'INCR':
+                console.log('gogogog');
                 return { counter: state.counter + action.by };
             default:
                 return state;
