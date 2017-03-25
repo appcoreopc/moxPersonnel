@@ -1,4 +1,5 @@
 import { formatError } from 'awesome-typescript-loader/dist/helpers';
+import { connect } from 'react-redux';
 
 import * as React from "react";
 import { UserPanelComponent } from "./UserPanelComponent";
@@ -19,3 +20,17 @@ export class ContactListComponent extends React.Component<Props, {}> {
   </div>
   }
 }
+
+
+const mapStateToProps = (state : any) => state;
+
+const mapDispatchToProps = (dispatch : any) => ({
+    incr: () => {
+        dispatch({ type: 'INCR', by: 1 });
+    },
+    decr: () => {
+        dispatch({ type: 'INCR', by: -1 });
+    }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactListComponent);
