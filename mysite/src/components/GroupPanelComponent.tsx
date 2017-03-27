@@ -1,7 +1,7 @@
 
 import * as React from "react";
 import { HeaderComponent } from "./Header"
-import  UserPanelComponent from "./UserPanelComponent"
+import { UserPanelComponent }  from "./UserPanelComponent"
 import { ContactListComponent } from "./ContactListComponent"
 
  interface Props {
@@ -18,7 +18,7 @@ export class GroupPanelComponent extends React.Component<Props, {}> {
   render() {
     return <div>
      <HeaderComponent title="Header" imageUrl=""  />
-     <UserPanelComponent></UserPanelComponent>
+     <UserPanelComponent candidate="Jeremy"></UserPanelComponent>
      <ContactListComponent title=""></ContactListComponent>
     </div>
   }

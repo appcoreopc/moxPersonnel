@@ -9,14 +9,15 @@ import { MainComponent } from "./components/MainPanel";
 let store = createStore(
     (state : any, action: any) => {
         switch (action.type) {
-            case 'INCR':
-                console.log('gogogog');
-                return { counter: state.counter + action.by };
+            case 'CANDIDATE_CHANGED':
+                console.log('store event here');
+                console.log(action);
+                return { candidate : action.candidate, key : action.key };
             default:
                 return state;
         }
     },
-    { counter: 0 });
+    { candidate : '', key : '' });
 
 ReactDOM.render(
     <Provider store={store}>
